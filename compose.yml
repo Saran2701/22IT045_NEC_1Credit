@@ -1,4 +1,4 @@
-# Update this file to add the content
+  # Update this file to add the content
 version: '3'
 services :
   Saran_Personal_api :
@@ -13,6 +13,17 @@ services :
       restart : always
       ports :
         - "5002:5000"
+  
+  Siva_Personal_api:
+      image: "jotheeswaranjd7/22itl02-personal-api-docker"
+      container_name : siva_personal_api_container
+      restart : always
+      ports :
+        - "5003:5000"
 
-  
-  
+  Siva_ml_model: 
+      image: "sivachidhambaram27/ml-model-docker"
+      container_name : siva_ml_model_container
+      restart : always
+      ports :
+        - "5004:5000"
